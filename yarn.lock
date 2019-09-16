@@ -11,12 +11,12 @@
     "@aws-amplify/core" "^1.1.2"
     uuid "^3.2.1"
 
-"@aws-amplify/api@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@aws-amplify/api/-/api-1.1.1.tgz#1b229151bd40b215b8a59058cd66f35174e47d22"
-  integrity sha512-f1VWLWwDZlb4+5Qpm0swTlNITQyE35up/YxAjCPHwHgWFqa5dG6I8XH1G44OSkFpQWTM4hTBUy7dUtJmRnYdig==
+"@aws-amplify/api@^1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/api/-/api-1.1.3.tgz#1fae038c7978d0be49fe063ce27c3a74ef159dd6"
+  integrity sha512-j/11a9TWK8KckH1Wif6TgXO7AKMjxgj5foQm0py3mSY3Ify/rc+1H417Ym//R9JNhs3SEDuIbnnWZew6EDQDAQ==
   dependencies:
-    "@aws-amplify/auth" "^1.3.1"
+    "@aws-amplify/auth" "^1.3.3"
     "@aws-amplify/cache" "^1.0.34"
     "@aws-amplify/core" "^1.1.2"
     axios "^0.19.0"
@@ -24,10 +24,10 @@
     uuid "^3.2.1"
     zen-observable "^0.8.6"
 
-"@aws-amplify/auth@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@aws-amplify/auth/-/auth-1.3.1.tgz#b5d882c83c0e801264396765f9002eee29828a4b"
-  integrity sha512-Hja6T194p5z3KxaaIT2tYUtRB/6265b7HGAk1zFWh7ey95MgOZyGFcxNZ3/2ynZDK5311QdUagi1PA+9IG7skA==
+"@aws-amplify/auth@^1.3.3":
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/auth/-/auth-1.3.3.tgz#2ea127520ffb5966f708bd36dda8b458c23cbfa1"
+  integrity sha512-JDs5RS4DM8N9NZcgDLGiPy5n2ZLmO0tclTksBFsSC1N5YTgkRgsgf38/F9FHjr7rUOqkEqAF6VJUAumLBJMLKA==
   dependencies:
     "@aws-amplify/cache" "^1.0.34"
     "@aws-amplify/core" "^1.1.2"
@@ -83,10 +83,10 @@
   dependencies:
     "@aws-amplify/core" "^1.1.2"
 
-"@aws-amplify/ui@^1.0.23":
-  version "1.0.23"
-  resolved "https://registry.yarnpkg.com/@aws-amplify/ui/-/ui-1.0.23.tgz#d984607168cf9ccaba6886c5e30eecc304cbc73a"
-  integrity sha512-2bSL5cRHFnUiwB4k6Oe8+fNPEr0iUlgo+5zHJM9+ycTyYwIEHmDNq1CkeMXOcF8T9zoKjWizwVPrntA/fEmCLQ==
+"@aws-amplify/ui@^1.0.25":
+  version "1.0.25"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/ui/-/ui-1.0.25.tgz#4d0700a5e10905de158338d40fe3ddd0893b2692"
+  integrity sha512-rVe2JCOS9/lMRMfguRmDR2czN+nifqNbIUwocFdEpUI+cRUhlszigkHSsrW2L45wLGoy/rgJGUplrvIyBNGevQ==
 
 "@aws-amplify/xr@^0.1.24":
   version "0.1.24"
@@ -2059,29 +2059,29 @@ autoprefixer@^9.6.1:
     postcss "^7.0.17"
     postcss-value-parser "^4.0.0"
 
-aws-amplify-react@^2.4.2:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/aws-amplify-react/-/aws-amplify-react-2.4.2.tgz#597dbaef91ec7ed49492cc1e4236f9aefcda3e45"
-  integrity sha512-KslxSLxxZVPxxE1m+KsY371zpODtNglK7IQwY+esajP6tjUrJcRXbsr7EdXlh8XCIf/td7G/kaFU2QEGIlYlww==
+aws-amplify-react@^2.4.4:
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/aws-amplify-react/-/aws-amplify-react-2.4.4.tgz#e52ecd6cdf8cd879bce7424c77760c701954c54b"
+  integrity sha512-EufOiplYsUS8fmK1l9gAxMbRbsI7sH3/v8s7x083jojYddR+bAG8E5DwTFwP3dzvK9GRvmmo4FtCdGIO7kG0aA==
   dependencies:
     qrcode.react "^0.8.0"
     regenerator-runtime "^0.11.1"
 
-aws-amplify@^1.1.38:
-  version "1.1.38"
-  resolved "https://registry.yarnpkg.com/aws-amplify/-/aws-amplify-1.1.38.tgz#6cf1613b07dd2bc9cc4373e4917b2938c5f0bc24"
-  integrity sha512-IC56yUzFG4WehFLsg/XTn4jE1/QFIzg/DmltBG0dx7OHZ+CC2P4n09afYBuwETEHNzH5hPzHbiLgZYq0SZaoMw==
+aws-amplify@^1.1.40:
+  version "1.1.40"
+  resolved "https://registry.yarnpkg.com/aws-amplify/-/aws-amplify-1.1.40.tgz#2074b57690bafd74d0e7a35d6c7d6ae96e565da7"
+  integrity sha512-OOZRh/TP1jhjr+BEs4YcdqWp88F2VhEzpsdq303n6MC6KGJb722+JsIHXkK9+AcMgYZ2SiXZEbImPtqzVqyRIg==
   dependencies:
     "@aws-amplify/analytics" "^1.2.25"
-    "@aws-amplify/api" "^1.1.1"
-    "@aws-amplify/auth" "^1.3.1"
+    "@aws-amplify/api" "^1.1.3"
+    "@aws-amplify/auth" "^1.3.3"
     "@aws-amplify/cache" "^1.0.34"
     "@aws-amplify/core" "^1.1.2"
     "@aws-amplify/interactions" "^1.0.37"
     "@aws-amplify/predictions" "^1.0.5"
     "@aws-amplify/pubsub" "^1.1.2"
     "@aws-amplify/storage" "^1.1.2"
-    "@aws-amplify/ui" "^1.0.23"
+    "@aws-amplify/ui" "^1.0.25"
     "@aws-amplify/xr" "^0.1.24"
 
 aws-sdk@2.518.0:
@@ -2307,9 +2307,9 @@ balanced-match@^1.0.0:
   integrity sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
 
 base64-js@^1.0.2:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.3.0.tgz#cab1e6118f051095e58b5281aea8c1cd22bfc0e3"
-  integrity sha512-ccav/yGvoa80BQDljCxsmmQ3Xvx60/UpBIij5QN21W3wBi/hhIC9OoO+KLpu9IJTS9j4DRVJ3aDDF9cMSoa2lw==
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.3.1.tgz#58ece8cb75dd07e71ed08c736abc5fac4dbf8df1"
+  integrity sha512-mLQ4i2QO1ytvGWFWmcngKO//JXAQueZvwEKtjgQFM4jIK0kU+ytMfplL8j+n5mspOfjHwoAg+9yhb7BwAHm36g==
 
 base@^0.11.1:
   version "0.11.2"
@@ -3422,10 +3422,10 @@ data-urls@^1.0.0, data-urls@^1.1.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
-date-fns@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.0.1.tgz#c5f30e31d3294918e6b6a82753a4e719120e203d"
-  integrity sha512-C14oTzTZy8DH1Eq8N78owrCWvf3+cnJw88BTK/N3DYWVxDJuJzPaNdplzYxDYuuXXGvqBcO4Vy5SOrwAooXSWw==
+date-fns@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.2.1.tgz#b3f79cf56760af106050c686f4c72586a3383ee9"
+  integrity sha512-4V1i5CnTinjBvJpXTq7sDHD4NY6JPcl15112IeSNNLUWQOQ+kIuCvRGOFZMQZNvkadw8F9QTyZxz59rIRU6K+w==
 
 date-now@^0.1.4:
   version "0.1.4"
@@ -8547,7 +8547,12 @@ react-error-overlay@^6.0.1:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.1.tgz#b8d3cf9bb991c02883225c48044cb3ee20413e0f"
   integrity sha512-V9yoTr6MeZXPPd4nV/05eCBvGH9cGzc52FN8fs0O0TVQ3HYYf1n7EgZVtHbldRq5xU9zEzoXIITjYNIfxDDdUw==
 
-react-is@^16.8.1, react-is@^16.8.4:
+react-is@^16.8.1:
+  version "16.9.0"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
+  integrity sha512-tJBzzzIgnnRfEm046qRcURvwQnZVXmuCbscxUO5RWrGTXpon2d4c8mI0D8WE6ydVIm29JiLB6+RslkIvym9Rjw==
+
+react-is@^16.8.4:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
