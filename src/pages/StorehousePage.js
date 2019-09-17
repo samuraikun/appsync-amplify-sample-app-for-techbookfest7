@@ -1,10 +1,10 @@
 import React from 'react'
 
 
-function MarketPage() {
+function StorehousePage(props) {
   return (
-    <div>MarketPage</div>
+    <div>MarketPage {props.storehouseId}</div>
   )
 }
 
-export default MarketPage;
+export default StorehousePage;
