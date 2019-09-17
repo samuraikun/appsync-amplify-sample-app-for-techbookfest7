@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Auth, Hub } from 'aws-amplify'
-import { Authenticator, AmplifyTheme } from 'aws-amplify-react';
+import { Authenticator } from 'aws-amplify-react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 import HomePage from './pages/HomePage';
-import ProfilePage from './pages/ProfilePage';
 import StorehousePage from './pages/StorehousePage';
 import Nabvar from './components/Navbar';
 
@@ -14,7 +13,7 @@ function App() {
   useEffect(() => {
     const getUserData = async () => {
       const user = await Auth.currentAuthenticatedUser()
-      user ? setUser({ user }) : setUser(null)
+      user ? setUser(user) : setUser(null)
     }
     
     getUserData()
@@ -43,12 +42,20 @@ function App() {
       }
     });
   }, [])
+
+  const handleSignout = async () => {
+    try {
+      await Auth.signOut();
+    } catch(err) {
+      console.error('Error signing out user', err);
+    }
+  }
   
   return !user ? <Authenticator /> : (
     <Router>
       <>
         {/* Navbar */}
-        <Nabvar user={user} />
+        <Nabvar user={user} handleSignout={handleSignout} />
         {/* Routes */}
         <div className='app-container'>
           <Route exact path='/' component={HomePage} />
