@@ -1,0 +1,38 @@
+type Storehouse @model @searchable @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  name: String!
+  products: [Product]
+    @connection(name: "StorehouseProducts", sortField: "createdAt")
+  tags: [String]
+  owner: String!
+  createdAt: String
+}
+
+type Product @model @auth(rules: [{ allow: owner }]) {
+  id: ID!
+  description: String!
+  storehouse: Storehouse @connection(name: "StorehouseProducts")
+  file: S3Object!
+  price: Float!
+  shipped: Boolean!
+  owner: String
+  createdAt: String
+}
+
+type S3Object {
+  bucket: String!
+  region: String!
+  key: String!
+}
+
+type User
+  @model(
+    queries: { get: "getUser" }
+    mutations: { create: "registerUser", update: "updateUser" }
+    subscriptions: null
+  ) {
+  id: ID!
+  username: String!
+  email: String!
+  registered: Boolean
+}
