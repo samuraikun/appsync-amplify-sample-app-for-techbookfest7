@@ -1,9 +1,9 @@
 import React from 'react'
 
 
-function MarketPage() {
+function MarketPage(props) {
   return (
-    <div>MarketPage</div>
+    <div>MarketPage {props.storehouseId}</div>
   )
 }
 
