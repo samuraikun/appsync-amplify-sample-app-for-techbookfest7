@@ -1,6 +1,6 @@
 {
 	"auth": {
-		"appsyncamplifysample2f5037a6": {
+		"appsyncamplifysample4caac086": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": []
@@ -16,7 +16,7 @@
 					"defaultAuthentication": {
 						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
 						"userPoolConfig": {
-							"userPoolId": "authappsyncamplifysample2f5037a6"
+							"userPoolId": "authappsyncamplifysample4caac086"
 						}
 					}
 				}

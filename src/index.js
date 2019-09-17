@@ -7,7 +7,6 @@ import * as serviceWorker from './serviceWorker';
 import 'element-theme-default';
 
 Amplify.configure(aws_exports);
-console.log(Amplify);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
