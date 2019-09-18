@@ -7,24 +7,51 @@ import { UserContext } from '../App';
 function NewStorehouse() {
   const [addStorehouseDialog, setAddStorehouseDialog] = useState(false);
   const [name, setName] = useState('');
+  const [tags] = useState([
+    'food',
+    'drink',
+    'furniture',
+    'appliance',
+    'book',
+    'vehicle'
+  ]);
+  const [selectedTags, setSelectedTags] = useState([]);
+  const [options, setOptions] = useState([]);
   const user = useContext(UserContext);
 
   const handleAddStorehouse = async user => {
     try {
       setAddStorehouseDialog(false)
       const owner = user.username;
-      const input = { name, owner }
+      const input = {
+        name,
+        owner,
+        tags: selectedTags
+      }
       console.log(input)
       const result = await API.graphql(graphqlOperation(createStorehouse, { input }));
       
       console.info(`Created storehouse: id ${result.data.createStorehouse.id}`);
       setName('');
+      setSelectedTags([]);
     } catch(err) {
       Notification.error({
         title: 'Error',
         message: `${err.message || 'Error adding storehouse'}`
       });
     }
+  }
+
+  const handleFilterTags = query => {
+    const options = tags
+      .map(tag => ({ value: tag, label: tag }))
+      .filter(tag => {
+        return tag.label
+          .toLowerCase()
+          .includes(query.toLowerCase())
+      });
+
+    setOptions(options);
   }
 
   return (
@@ -56,6 +83,24 @@ function NewStorehouse() {
                 onChange={name => setName(name)}
                 value={name}
               />
+            </Form.Item>
+            <Form.Item label='Add Tags'>
+              <Select
+                multiple={true}
+                filterable={true}
+                placeholder='Tags'
+                onChange={selectedTags => setSelectedTags(selectedTags)}
+                remoteMethod={handleFilterTags}
+                remote={true}
+              >
+                {options.map(option => (
+                  <Select.Option
+                    key={option.value}
+                    label={option.label}
+                    value={option.value}
+                  />
+                ))}
+              </Select>
             </Form.Item>
           </Form>
         </Dialog.Body>
