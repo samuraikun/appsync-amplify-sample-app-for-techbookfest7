@@ -2,10 +2,10 @@ import React from "react";
 // prettier-ignore
 // import { Form, Button, Dialog, Input, Select, Notification } from 'element-react'
 
-function NewMarket() {
+function NewStorehouse() {
   return (
     <div>NewMarket</div>
   )
 }
 
-export default NewMarket;
+export default NewStorehouse;
