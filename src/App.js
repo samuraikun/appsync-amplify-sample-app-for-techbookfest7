@@ -7,6 +7,8 @@ import HomePage from './pages/HomePage';
 import StorehousePage from './pages/StorehousePage';
 import Nabvar from './components/Navbar';
 
+export const UserContext = React.createContext();
+
 function App() {
   const [user, setUser] = useState(null)
 
@@ -52,20 +54,22 @@ function App() {
   }
   
   return !user ? <Authenticator /> : (
-    <Router>
-      <>
-        {/* Navbar */}
-        <Nabvar user={user} handleSignout={handleSignout} />
-        {/* Routes */}
-        <div className='app-container'>
-          <Route exact path='/' component={HomePage} />
-          <Route
-            path='/storehouses/:storehouseId'
-            component={({ match }) => <StorehousePage storehouseId={match.params.storehouseId} />}
-          />
-        </div>
-      </>
-    </Router>
+    <UserContext.Provider value={user}>
+      <Router>
+        <>
+          {/* Navbar */}
+          <Nabvar user={user} handleSignout={handleSignout} />
+          {/* Routes */}
+          <div className='app-container'>
+            <Route exact path='/' component={HomePage} />
+            <Route
+              path='/storehouses/:storehouseId'
+              component={({ match }) => <StorehousePage storehouseId={match.params.storehouseId} />}
+            />
+          </div>
+        </>
+      </Router>
+    </UserContext.Provider>
   )
 }
 

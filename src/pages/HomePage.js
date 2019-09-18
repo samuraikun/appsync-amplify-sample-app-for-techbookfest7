@@ -1,9 +1,10 @@
 import React from 'react';
+import NewMarket from '../components/NewStorehouse';
 
-function HomePage() {
+export default function HomePage() {
   return (
-    <div>Home</div>
+    <>
+      <NewMarket />
+    </>
   )
 }
-
-export default HomePage;
