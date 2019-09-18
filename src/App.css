@@ -187,7 +187,7 @@ body {
   align-items: center;
 }
 
-.market-header {
+.storehouse-header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -195,7 +195,7 @@ body {
   flex-wrap: wrap;
 }
 
-.market-title {
+.storehouse-title {
   font-weight: 300;
   border-radius: 10px;
   text-decoration: #f90 solid underline;
@@ -207,50 +207,50 @@ body {
   align-items: center;
 }
 
-.market-title-button {
+.storehouse-title-button {
   padding-left: 0.5em !important;
   color: #f90 !important;
   font-size: 30px !important;
 }
 
 @media (min-width: 640px) {
-  .market-title {
+  .storehouse-title {
     font-size: 3rem;
   }
 }
 
 @media (max-width: 540px) {
-  .market-title {
+  .storehouse-title {
     font-size: 2.1rem;
   }
-  .market-title-button {
+  .storehouse-title-button {
     font-size: 25px !important;
   }
 }
 
 @media (max-width: 500px) {
-  .market-title {
+  .storehouse-title {
     font-size: 1.8rem;
   }
-  .market-title-button {
+  .storehouse-title-button {
     font-size: 25px !important;
   }
 }
 
 @media (max-width: 420px) {
-  .market-title {
+  .storehouse-title {
     font-size: 1.6rem;
   }
-  .market-title-button {
+  .storehouse-title-button {
     font-size: 20px !important;
   }
 }
 
 @media (max-width: 350px) {
-  .market-title {
+  .storehouse-title {
     font-size: 1.5rem;
   }
-  .market-title-button {
+  .storehouse-title-button {
     font-size: 15px !important;
   }
 }
