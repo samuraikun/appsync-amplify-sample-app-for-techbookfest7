@@ -1,10 +1,12 @@
 import React from 'react';
-import NewMarket from '../components/NewStorehouse';
+import NewStorehouse from '../components/NewStorehouse';
+import StorehouseList from '../components/StorehouseList';
 
 export default function HomePage() {
   return (
     <>
-      <NewMarket />
+      <NewStorehouse />
+      <StorehouseList />
     </>
   )
 }
