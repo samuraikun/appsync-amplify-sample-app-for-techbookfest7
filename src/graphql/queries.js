@@ -32,6 +32,14 @@ export const listStorehouses = `query ListStorehouses(
       id
       name
       products {
+        items {
+          id
+          description
+          price
+          shipped
+          owner
+          createdAt
+        }
         nextToken
       }
       tags
