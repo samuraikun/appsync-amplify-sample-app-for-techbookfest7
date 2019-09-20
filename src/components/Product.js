@@ -17,12 +17,10 @@ function Product({ product }) {
   const [deleteProductDialog, setDeleteProductDialog] = useState(false);
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState(null);
-  const [shipped, setShipped] = useState(false);
 
   const handleEditProduct = () => {
     setUpdateProductDialog(true);
     setDescription(product.description);
-    setShipped(product.shipped);
     setPrice(product.price);
   }
 
@@ -32,7 +30,6 @@ function Product({ product }) {
       const input = {
         id: productId,
         description,
-        shipped,
         price
       }
 
@@ -40,8 +37,8 @@ function Product({ product }) {
       console.log('Update product', result)
       
       Notification({
-        title: 'success',
-        message: 'Product successfully updated!',
+        title: '成功',
+        message: '製品の更新が完了しました！',
         type: 'success',
         duration: 2000
       });
@@ -57,8 +54,8 @@ function Product({ product }) {
       await API.graphql(graphqlOperation(deleteProduct, { input }));
 
       Notification({
-        title: 'success',
-        message: 'Product successfully deleted!',
+        title: '成功',
+        message: '製品の削除が完了しました！',
         type: 'success',
         duration: 2000
       });
@@ -134,7 +131,7 @@ function Product({ product }) {
 
       {/* Update Product Dialog */}
       <Dialog
-        title='Update Product'
+        title='製品の更新'
         size='large'
         customClass='dialog'
         visible={updateProductDialog}
@@ -142,7 +139,7 @@ function Product({ product }) {
       >
         <Dialog.Body>
           <Form labelPosition='top'>
-            <Form.Item label='Update Description'>
+            <Form.Item label='製品の説明'>
               <Input
                 type='text'
                 icon='information'
@@ -152,11 +149,11 @@ function Product({ product }) {
                 onChange={description => setDescription(description)}
               />
             </Form.Item>
-            <Form.Item label='Update Price'>
+            <Form.Item label='製品価格'>
               <Input
                 type='number'
                 icon='plus'
-                placeholder='Price ($USD)'
+                placeholder='...円'
                 value={price}
                 onChange={price => setPrice(price)}
               />

@@ -9,7 +9,6 @@ function NewProduct({ storehouseId }) {
   // State
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState(null);
-  const [shipped, setShipped] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [imagePreview, setImagePreview] = useState('');
   const [image, setImage] = useState('');
@@ -18,7 +17,6 @@ function NewProduct({ storehouseId }) {
   const clearState = () => {
     setDescription('');
     setPrice('');
-    setShipped(false);
     setIsUploading(false);
     setImagePreview('');
     setImage('');
@@ -48,15 +46,14 @@ function NewProduct({ storehouseId }) {
         productStorehouseId: storehouseId,
         description,
         price,
-        shipped,
         file
       }
       const result = await API.graphql(graphqlOperation(createProduct, { input }));
       console.log('Created product', result)
 
       Notification({
-        title: 'Success',
-        message: 'Product successfully created!',
+        title: '成功',
+        message: '製品の登録が完了しました！',
         type: 'success'
       });
       clearState()
