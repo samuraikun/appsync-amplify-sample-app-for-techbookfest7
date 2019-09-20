@@ -14,7 +14,6 @@ type Product @model @auth(rules: [{ allow: owner }]) {
   storehouse: Storehouse @connection(name: "StorehouseProducts")
   file: S3Object!
   price: Float!
-  shipped: Boolean!
   owner: String
   createdAt: String
 }

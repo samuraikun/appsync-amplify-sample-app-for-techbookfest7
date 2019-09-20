@@ -10,7 +10,6 @@ export const createStorehouse = `mutation CreateStorehouse($input: CreateStoreho
         id
         description
         price
-        shipped
         owner
         createdAt
       }
@@ -31,7 +30,6 @@ export const updateStorehouse = `mutation UpdateStorehouse($input: UpdateStoreho
         id
         description
         price
-        shipped
         owner
         createdAt
       }
@@ -52,7 +50,6 @@ export const deleteStorehouse = `mutation DeleteStorehouse($input: DeleteStoreho
         id
         description
         price
-        shipped
         owner
         createdAt
       }
@@ -84,7 +81,6 @@ export const createProduct = `mutation CreateProduct($input: CreateProductInput!
       key
     }
     price
-    shipped
     owner
     createdAt
   }
@@ -110,7 +106,6 @@ export const updateProduct = `mutation UpdateProduct($input: UpdateProductInput!
       key
     }
     price
-    shipped
     owner
     createdAt
   }
@@ -136,7 +131,6 @@ export const deleteProduct = `mutation DeleteProduct($input: DeleteProductInput!
       key
     }
     price
-    shipped
     owner
     createdAt
   }

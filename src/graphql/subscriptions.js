@@ -10,7 +10,6 @@ export const onCreateStorehouse = `subscription OnCreateStorehouse($owner: Strin
         id
         description
         price
-        shipped
         owner
         createdAt
       }
@@ -31,7 +30,6 @@ export const onUpdateStorehouse = `subscription OnUpdateStorehouse($owner: Strin
         id
         description
         price
-        shipped
         owner
         createdAt
       }
@@ -52,7 +50,6 @@ export const onDeleteStorehouse = `subscription OnDeleteStorehouse($owner: Strin
         id
         description
         price
-        shipped
         owner
         createdAt
       }
@@ -84,7 +81,6 @@ export const onCreateProduct = `subscription OnCreateProduct($owner: String!) {
       key
     }
     price
-    shipped
     owner
     createdAt
   }
@@ -110,7 +106,6 @@ export const onUpdateProduct = `subscription OnUpdateProduct($owner: String!) {
       key
     }
     price
-    shipped
     owner
     createdAt
   }
@@ -136,7 +131,6 @@ export const onDeleteProduct = `subscription OnDeleteProduct($owner: String!) {
       key
     }
     price
-    shipped
     owner
     createdAt
   }
