@@ -10,7 +10,6 @@ export const getStorehouse = `query GetStorehouse($id: ID!) {
         id
         description
         price
-        shipped
         owner
         createdAt
       }
@@ -32,14 +31,6 @@ export const listStorehouses = `query ListStorehouses(
       id
       name
       products {
-        items {
-          id
-          description
-          price
-          shipped
-          owner
-          createdAt
-        }
         nextToken
       }
       tags
@@ -70,7 +61,6 @@ export const getProduct = `query GetProduct($id: ID!) {
       key
     }
     price
-    shipped
     owner
     createdAt
   }
@@ -98,7 +88,6 @@ export const listProducts = `query ListProducts(
         key
       }
       price
-      shipped
       owner
       createdAt
     }
