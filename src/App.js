@@ -64,7 +64,7 @@ function App() {
             <Route exact path='/' component={HomePage} />
             <Route
               path='/storehouses/:storehouseId'
-              component={({ match }) => <StorehousePage storehouseId={match.params.storehouseId} />}
+              component={({ match }) => <StorehousePage user={user} storehouseId={match.params.storehouseId} />}
             />
           </div>
         </>

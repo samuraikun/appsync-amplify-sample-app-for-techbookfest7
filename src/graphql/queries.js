@@ -120,6 +120,13 @@ export const searchStorehouses = `query SearchStorehouses(
       id
       name
       products {
+        items {
+          id
+          description
+          price
+          owner
+          createdAt
+        }
         nextToken
       }
       tags

@@ -3,12 +3,12 @@ import { graphqlOperation } from 'aws-amplify';
 import { Connect } from 'aws-amplify-react';
 import { listStorehouses } from '../graphql/queries';
 import { onCreateStorehouse } from '../graphql/subscriptions';
-import { Loading, Card, Tag } from "element-react";
+import { Loading, Card, Tag, Icon } from "element-react";
 import { Link } from 'react-router-dom';
 import Error from './Error';
 import { UserContext } from '../App';
 
-const StorehouseList = () => {
+const StorehouseList = ({ searchResults }) => {
   const user = useContext(UserContext);
   const onNewStorehouse = (prevQuery, newData) => {
     // shallow copy
@@ -31,14 +31,25 @@ const StorehouseList = () => {
       {({ data, loading, errors }) => {
         if (errors.length > 0) return <Error errors={errors} />
         if (loading || !data.listStorehouses) return <Loading fullscreen={true} />
+        const storehouses = searchResults.length > 0 ? searchResults : data.listStorehouses.items;
 
         return (
           <>
-            <h2 className='header'>
-              <img src='https://icon.now.sh/store_mall_directory/527FFF' alt='Store Icon' className='large-icon' />
-              倉庫一覧
-            </h2>
-            {data.listStorehouses.items.map(storehouse => (
+            {searchResults.length > 0 ? (
+              <h2 className='text-green'>
+                <Icon type='success' name='check' className='icon' />
+                {searchResults.length} 検索結果
+              </h2>
+            )
+            :
+            (
+              <h2 className='header'>
+                <img src='https://icon.now.sh/store_mall_directory/527FFF' alt='Store Icon' className='large-icon' />
+                倉庫一覧
+              </h2>
+            )
+            }
+            {storehouses.map(storehouse => (
               <div key={storehouse.id} className='my-2'>
                 <Card
                   bodyStyle={{

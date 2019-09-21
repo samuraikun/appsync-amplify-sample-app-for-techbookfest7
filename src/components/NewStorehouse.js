@@ -4,7 +4,7 @@ import { createStorehouse } from '../graphql/mutations';
 import { Form, Button, Dialog, Input, Select, Notification } from 'element-react';
 import { UserContext } from '../App';
 
-function NewStorehouse() {
+function NewStorehouse({ search, isSearching, handleSearchChange, handleClearSearch, handleSearch }) {
   const [addStorehouseDialog, setAddStorehouseDialog] = useState(false);
   const [name, setName] = useState('');
   const [tags] = useState([
@@ -66,6 +66,27 @@ function NewStorehouse() {
             onClick={() => setAddStorehouseDialog(true)}
           />
         </h1>
+        <Form inline={true} onSubmit={handleSearch}>
+          <Form.Item>
+            <Input
+              placeholder='Search Markets...'
+              icon='circle-cross'
+              value={search}
+              onIconClick={handleClearSearch}
+              onChange={handleSearchChange}
+            />
+          </Form.Item>
+          <Form.Item>
+            <Button
+              type='info'
+              icon='search'
+              onClick={handleSearch}
+              loading={isSearching}
+            >
+              Search
+            </Button>
+          </Form.Item>
+        </Form>
       </div>
       <Dialog
         title='倉庫の作成'
